@@ -1,0 +1,35 @@
+body{
+    background-color: antiquewhite;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    /* Movemos o segredo do scroll para cá! */
+    max-height: 100%;   /* Diz para a lista não passar do tamanho da section */
+    overflow-y: auto;   /* Cria o scroll apenas na lista de alunos */
+    padding-right: 5px;
+}
+li{
+   color: rgb(217, 136, 121);
+    background-color: rgb(54, 54, 54);
+    padding: 10px;
+    border-radius: 4px;
+    list-style: none; /* Remove as bolinhas para o layout ficar limpo */
+    
+    /* Garante que a li não vai tentar encolher para sumir da tela */
+    flex-shrink: 0;
+}
+main{
+    display: grid;
+    justify-items: end;
+}
+.studentSection{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    /* Deixe a section se adaptar à altura que você quer para o bloco inteiro */
+    max-height: 80vh;
+}
